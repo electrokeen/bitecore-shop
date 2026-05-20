@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* Вказуємо Tailwind v4 шукати класи в наших React-файлах */
+@source "../src";
+
+/* ЦЕЙ РЯДОК ПОТРІБЕН ДЛЯ TAILWIND v4, ЩОБ ПРАЦЮВАЛА ЗМІНА ТЕМИ */
+@variant dark (&:where(.dark, .dark *));
+
+body {
+  /* Базові кольори за замовчуванням (світла тема) */
+  background-color: #f9fafb; /* bg-gray-50 */
+  color: #111827; /* text-gray-900 */
+  
+  /* Плавний перехід кольору, щоб очі відпочивали при перемиканні */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Якщо увімкнено темний режим, міняємо базовий фон всього сайту */
+.dark body {
+  background-color: #111827; /* bg-gray-900 */
+  color: #f9fafb; /* text-white */
+}
