@@ -1,16 +1,31 @@
-# React + Vite
+# 🛒 Bitecore — Сучасний Інтернет-Магазин Електроніки
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Bitecore** — це високопродуктивний вебдодаток (Single Page Application) для продажу цифрової техніки та електроніки. Проєкт реалізовано на базі сучасного архітектурного стеку з використанням компонентного підходу, реактивного керування станом та хмарного Serverless-бекенду.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Стек технологій (Tech Stack)
 
-## React Compiler
+* **Frontend:** React.js (v18+), Vite (збірка додатка), Tailwind CSS (адаптивна верстка та дизайн-система), React Router v6 (клієнтська навігація).
+* **Backend-as-a-Service (BaaS):** * **Firebase Auth** — захищена автентифікація користувачів.
+  * **Cloud Firestore** — NoSQL база даних у реальному часі для збереження товарів та замовлень.
+  * **Firebase Storage** — хмарне сховище для динамічних медіафайлів (зображень товарів).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Ключовий функціонал додатка
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Каталог товарів:** Динамічне завантаження даних із NoSQL Firestore, асинхронна багатофакторна фільтрація за категоріями, брендами та діапазоном цін.
+2. **Збереження стану фільтрів:** Інтеграція з `sessionStorage` для запобігання скиданню параметрів пошуку при переходах між сторінками.
+3. **Модуль порівняння електроніки:** Унікальний алгоритм на базі структури `Set`, що дозволяє порівнювати технічні характеристики пристроїв у реальному часі.
+4. **Кошик та оформлення замовлення:** Інтерактивний кошик із глобальним станом (`React Context API`) та валідацією форми оформлення замовлення «в 1 клік».
+5. **Валідація медіаформатів:** Система автоматичного контролю завантаження картинок (обмеження за вагою, типом `.webp`/`.png`) з емодзі-заглушками у разі збоїв зв'язку.
+
+---
+
+## 🚀 Інструкція з локального розгортання
+
+### 1. Клонування репозиторію:
+```bash
+git clone [https://github.com/electrokeen/bitecore-shop.git](https://github.com/electrokeen/bitecore-shop.git)
+cd bitecore-shop
